@@ -34,7 +34,7 @@ repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.
 
 | Command | Description |
 | ------- | ----------- |
-| make clobber | delete previuous compiled files |
+| make clobber | delete previous compiled files |
 | lunch | lunch |
 | 3 | Pixel 3 |
 | m | make compilation|
