@@ -22,6 +22,19 @@
     
  PATH=~/Documents/aosp_build/bin:$PATH
 ```
-- Add librairy
+- Add libncurses5 librairy (Ubuntu 20)
 
 If error at compilation with Ubuntu 2020, check [this](https://groups.google.com/forum/#!msg/android-building/BaGEAAzcsyA/lbcRNhZXAQAJ) link
+Add librairy with this command : `sudo apt install libncurses5`
+
+## Compilation
+
+- Command perhaps not necessary :
+repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r39
+
+| Command | Description |
+| ------- | ----------- |
+| make clobber | delete previuous compiled files |
+| lunch | lunch |
+| 3 | Pixel 3 |
+| m | make compilation|
