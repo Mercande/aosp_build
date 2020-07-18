@@ -56,3 +56,15 @@ repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.
 
 - After a long time, you may have that kind of message:
 - #### build completed successfully (05:45:48 (hh:mm:ss)) ####
+
+## Emulation
+
+- ~/Documents/aosp_build$ emulator
+- emulator: ERROR: Can't get kernel version from the kernel image file: '/home/.../Documents/aosp_build/prebuilts/qemu-kernel/arm64/ranchu/kernel-qemu'
+
+- I try to make a bash file :
+- /home/.../Android/Sdk/emulator/emulator -avd Pixel_3_API_29 -sysdir out/target/product/blueline/ -system /home/.../Documents/aosp_build/out/target/product/blueline/system.img -ramdisk /home/.../Documents/aosp_build/out/target/product/blueline/ramdisk.img -data /home/.../Documents/aosp_build/out/target/product/blueline/userdata.img -kernel /home/.../Documents/aosp_build/prebuilts/qemu-kernel/arm64/ranchu/kernel-qemu -sdcard /home/.../.android/avd/Pixel_3_API_29.avd/sdcard.img
+- but it doesn't work :
+- ~/Documents/aosp_build$ ./emulator_eric_4
+- bash: ./emulator_eric_4: Permission denied
+
