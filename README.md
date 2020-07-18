@@ -55,6 +55,7 @@ repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.
 | m | make compilation|
 
 - After a long time, you may have that kind of message:
+- [100% 88813/88813] Target vbmeta image: out/target/product/blueline/vbmeta.img
 - #### build completed successfully (05:45:48 (hh:mm:ss)) ####
 
 ## Emulation
