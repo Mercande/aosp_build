@@ -21,6 +21,7 @@
  alias studio="~/Documents/android-studio/bin/studio.sh"
     
  PATH=~/Documents/aosp_build/bin:$PATH
+ PATH=/home/<username>/Android/Sdk/platform-tools:$PATH
 ```
 - Add libncurses5 librairy (Ubuntu 20)
 
@@ -61,16 +62,15 @@ repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.
 ## Emulation
 
 - ~/Documents/aosp_build$ emulator
-- emulator: ERROR: Can't get kernel version from the kernel image file: '/home/.../Documents/aosp_build/prebuilts/qemu-kernel/arm64/ranchu/kernel-qemu'
+- emulator: ERROR: Can't get kernel version from the kernel image file: '/home/<username>/Documents/aosp_build/prebuilts/qemu-kernel/arm64/ranchu/kernel-qemu'
 
 - In Android Studio (lunch with studio command), install un AVD (Android Virtual Device) ie.Pixel 3 API 29
 
 - You have to use the qemu-kernel for x86_64 made in the aosp_build/prebuits folder
 
 - Make a bash file 'emulator_toto_1':
-
 ```bash
-- /home/.../Android/Sdk/emulator/emulator -avd Pixel_3_API_29 -partition-size 2048 -kernel /home/.../Documents/aosp_build/prebuilts/qemu-kernel/x86_64/current/kernel-qemu2 -system /home/.../Documents/aosp_build/out/target/product/blueline/system.img -initdata /home/.../Documents/aosp_build/out/target/product/blueline/userdata.img -sdcard /home/.../.android/avd/Pixel_3_API_29.avd/sdcard.img -verbose
+- /home/<username>/Android/Sdk/emulator/emulator -avd Pixel_3_API_29 -partition-size 2048 -kernel /home/<username>/Documents/aosp_build/prebuilts/qemu-kernel/x86_64/current/kernel-qemu2 -system /home/<username>/Documents/aosp_build/out/target/product/blueline/system.img -initdata /home/<username>/Documents/aosp_build/out/target/product/blueline/userdata.img -sdcard /home/<username>/.android/avd/Pixel_3_API_29.avd/sdcard.img -verbose
 ```
 
 - Lunch :
