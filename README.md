@@ -63,9 +63,17 @@ repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.
 - ~/Documents/aosp_build$ emulator
 - emulator: ERROR: Can't get kernel version from the kernel image file: '/home/.../Documents/aosp_build/prebuilts/qemu-kernel/arm64/ranchu/kernel-qemu'
 
-- I try to make a bash file 'emulator_toto_1':
-- /home/.../Android/Sdk/emulator/emulator -avd Pixel_3_API_29 -sysdir out/target/product/blueline/ -system /home/.../Documents/aosp_build/out/target/product/blueline/system.img -ramdisk /home/.../Documents/aosp_build/out/target/product/blueline/ramdisk.img -data /home/.../Documents/aosp_build/out/target/product/blueline/userdata.img -kernel /home/.../Documents/aosp_build/prebuilts/qemu-kernel/arm64/ranchu/kernel-qemu -sdcard /home/.../.android/avd/Pixel_3_API_29.avd/sdcard.img
-- but it doesn't work :
+- In Android Studio (lunch with studio command), install un AVD (Android Virtual Device) ie.Pixel 3 API 29
+
+- You have to use the qemu-kernel for x86_64 made in the aosp_build/prebuits folder
+
+- Make a bash file 'emulator_toto_1':
+
+```bash
+- /home/.../Android/Sdk/emulator/emulator -avd Pixel_3_API_29 -partition-size 2048 -kernel /home/.../Documents/aosp_build/prebuilts/qemu-kernel/x86_64/current/kernel-qemu2 -system /home/.../Documents/aosp_build/out/target/product/blueline/system.img -initdata /home/.../Documents/aosp_build/out/target/product/blueline/userdata.img -sdcard /home/.../.android/avd/Pixel_3_API_29.avd/sdcard.img -verbose
+```
+
+- Lunch :
 - ~/Documents/aosp_build$ ./emulator_toto_1
-- bash: ./emulator_toto_1: Permission denied
+- and the simulated phone may appear
 
