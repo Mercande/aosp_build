@@ -45,7 +45,7 @@ Add librairy with this command : `sudo apt install libncurses5`
 ## Compilation
 
 - Command (perhaps not necessary) :
-repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r39
+repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r37
 - Command : source build/envsetup.sh
 
 | Command | Description |
